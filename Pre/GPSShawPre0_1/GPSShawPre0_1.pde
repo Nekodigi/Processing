@@ -2,8 +2,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.charset.Charset;
 import java.util.stream.Collectors;
-import java.util.Queue;
-import java.util.ArrayDeque;
 
 
 float sWeight = 10;
