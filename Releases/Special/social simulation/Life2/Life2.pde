@@ -12,8 +12,8 @@ float[][] wavect;
 float[][] waveenable;
 
 void setup(){
-  //fullScreen(P3D);
-  size(1900,1800,P3D);
+  fullScreen(P3D);
+  //size(1900,1800,P3D);
   frameRate(60);
   airwid=width/decimation;
   airhei=height/decimation;
@@ -66,12 +66,12 @@ void draw(){
           line(x*decimation, y*decimation, waveenable[x][y], x*decimation, (y+1)*decimation, waveenable[x][y+1]);
           break;
         case 1:
-          ellipse(x*decimation, y*decimation, (waveenable[x][y]+10)*decimation/50, (waveenable[x][y]+10)*decimation/50);
+          rect(x*decimation, y*decimation, (waveenable[x][y]+10)*decimation/50, (waveenable[x][y]+10)*decimation/50);
           break;
         case 2:
           line(x*decimation, y*decimation, waveenable[x][y], (x+1)*decimation, y*decimation, waveenable[x+1][y]);
           line(x*decimation, y*decimation, waveenable[x][y], x*decimation, (y+1)*decimation, waveenable[x][y+1]);
-          ellipse(x*decimation, y*decimation, (waveenable[x][y]+10)*decimation/50, (waveenable[x][y]+10)*decimation/50);
+          rect(x*decimation, y*decimation, (waveenable[x][y]+10)*decimation/50, (waveenable[x][y]+10)*decimation/50);
           break;
         default:
           drawmode=0;
