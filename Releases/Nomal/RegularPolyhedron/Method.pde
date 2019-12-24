@@ -9,8 +9,10 @@ PVector[] octaVecs(float r){
   return points;
 }
 
-void octa(float r){
+void octa(PVector pos, float r){
   PVector[] points = octaVecs(r);
+  pushMatrix();
+  translate(pos.x, pos.y, pos.z);
   pointVec(points[0]);
   pointVec(points[1]);
   pointVec(points[2]);
@@ -25,6 +27,7 @@ void octa(float r){
   triangleVec(points[1], points[5], points[2]);
   triangleVec(points[2], points[5], points[3]);
   triangleVec(points[3], points[5], points[0]);
+  popMatrix();
 }
 
 PVector[] tetraVecs(float r){
@@ -36,8 +39,10 @@ PVector[] tetraVecs(float r){
   return result;
 }
 
-void tetra(float r){
+void tetra(PVector pos, float r){
   PVector[] points = tetraVecs(r);
+  pushMatrix();
+  translate(pos.x, pos.y, pos.z);
   pointVec(points[0]);
   pointVec(points[1]);
   pointVec(points[2]);
@@ -46,6 +51,7 @@ void tetra(float r){
   triangleVec(points[0], points[3], points[1]);
   triangleVec(points[1], points[3], points[2]);
   triangleVec(points[2], points[3], points[0]);
+  popMatrix();
 }
 
 void triangleVec(PVector a, PVector b, PVector c){

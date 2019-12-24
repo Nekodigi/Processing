@@ -1,5 +1,5 @@
-float pointSize = 64;
-float lineWidth = 8;
+float pointSize = 32;
+float lineWidth = 4;
 
 void setup(){
   fullScreen(P3D);
@@ -13,5 +13,6 @@ void draw(){
   rotateX((float)mouseY/1000);
   rotateY((float)mouseX/1000);
   noFill();
-  octa(400);
+  octa(new PVector(1000, 0, 0), 400);
+  tetra(new PVector(-1000, 0, 0), 400);
 }

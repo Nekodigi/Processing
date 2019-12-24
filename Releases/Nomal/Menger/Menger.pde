@@ -8,8 +8,6 @@ ArrayList<Octa> Osponge;
 int dispType = 0;
 boolean userRot = false;
 
-
-
 void setup(){
   fullScreen(P3D);
   sponge_init(0, first_size);
